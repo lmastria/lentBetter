@@ -103,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="daysLeft" destination="s0J-ER-rNA" id="pjW-aE-YQJ"/>
+                        <outlet property="daysLeftOrTill" destination="l1b-AU-8DI" id="ceQ-ze-gpy"/>
                         <outlet property="lentYesNo" destination="xyn-v3-17K" id="Oh6-cz-VCO"/>
                         <outlet property="meatFish" destination="Jp1-xq-y8R" id="jEG-dV-3BT"/>
                         <outlet property="todayLabel" destination="FgT-Py-1Qj" id="D24-32-nhF"/>

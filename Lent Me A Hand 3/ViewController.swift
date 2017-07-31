@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lentYesNo: UILabel!
     @IBOutlet weak var meatFish: UILabel!
     @IBOutlet weak var daysLeft: UILabel!
+    @IBOutlet weak var daysLeftOrTill: UILabel!
     
     
     override func viewDidLoad() {
@@ -124,8 +125,17 @@ class ViewController: UIViewController {
         let start = calendar.ordinality(of: .day, in: .era, for: todaysToday)
         let end = calendar.ordinality(of: .day, in: .era, for: nextLentDate)
         
-        print ("There are \( end! - start! ) days until next Lent.")
-        daysLeft.text = ("There are \( end! - start! ) days until next Lent.")
+        print (start!)
+        print (end!)
+        if (start! < end!) {
+            daysLeftOrTill.text = ("Number of days until Lent:")
+        }
+        else {
+            daysLeftOrTill.text = ("Number of days until Lent ends:")
+        }
+        
+        print ("There are \( abs(end! - start!) ) days until next Lent.")
+        daysLeft.text = ("There are \( abs(end! - start!) ) days until next Lent.")
 
         //Commit test
         
